@@ -35,16 +35,31 @@ class Webscrapper:
 			contents = f.read()
 		soup = BeautifulSoup(contents, "html.parser")
 
-		data = json.loads(soup.text)
-		print(type(data))		
-		print(data.keys())
+		gainer_data = json.loads(soup.text)		# data class dict
+		gainer_content = gainer_data['Table']   #value class list
+		#print(gainer_content[0])
+
+		gainer_records = []
+		top_gainers = []
+		for record in gainer_content[0:10]:
+			rec = {'security_code': record['scrip_cd'],
+			'security_name': record['scripname'],
+			'group': record['scrip_grp'],
+			'last_traded_price': record['ltradert'],
+			'change_val': record['change_val'],
+			'change_perc': record['change_percent']}
+			
+			gainer_records.append(rec)
+			top_gainers.append(rec['security_name'])
+
+		for i,v in enumerate(top_gainers): print(i+1, ".", v)
 
 
 
 def main():
 	ws = Webscrapper()	
-	page = ws.crawl()
-	#ws.parse(page = 'no need to pass for now')
+	#page = ws.crawl()
+	ws.parse(page = 'no need to pass for now')
 
 if __name__ == '__main__':
 	main()
