@@ -1,0 +1,30 @@
+
+
+====================	 crawling started  ==========================
+emulating firefox browser
+POST http://127.0.0.1:51315/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"acceptInsecureCerts": true, "browserName": "firefox"}}, "desiredCapabilities": {"acceptInsecureCerts": true, "browserName": "firefox", "marionette": true}}
+Starting new HTTP connection (1): 127.0.0.1:51315
+http://127.0.0.1:51315 "POST /session HTTP/1.1" 200 682
+Finished Request
+POST http://127.0.0.1:51315/session/3a44a011-1233-4146-b425-c7abc22760a1/url {"url": "https://www.bseindia.com/"}
+http://127.0.0.1:51315 "POST /session/3a44a011-1233-4146-b425-c7abc22760a1/url HTTP/1.1" 200 14
+Finished Request
+POST http://127.0.0.1:51315/session/3a44a011-1233-4146-b425-c7abc22760a1/element {"value": "Trending", "using": "link text"}
+http://127.0.0.1:51315 "POST /session/3a44a011-1233-4146-b425-c7abc22760a1/element HTTP/1.1" 200 88
+Finished Request
+POST http://127.0.0.1:51315/session/3a44a011-1233-4146-b425-c7abc22760a1/element/ecd5e56e-dd27-4991-b3e2-83dd80e5d78a/click {"id": "ecd5e56e-dd27-4991-b3e2-83dd80e5d78a"}
+http://127.0.0.1:51315 "POST /session/3a44a011-1233-4146-b425-c7abc22760a1/element/ecd5e56e-dd27-4991-b3e2-83dd80e5d78a/click HTTP/1.1" 200 14
+Finished Request
+POST http://127.0.0.1:51315/session/3a44a011-1233-4146-b425-c7abc22760a1/timeouts {"implicit": 3000}
+http://127.0.0.1:51315 "POST /session/3a44a011-1233-4146-b425-c7abc22760a1/timeouts HTTP/1.1" 200 14
+Finished Request
+GET http://127.0.0.1:51315/session/3a44a011-1233-4146-b425-c7abc22760a1/source {}
+http://127.0.0.1:51315 "GET /session/3a44a011-1233-4146-b425-c7abc22760a1/source HTTP/1.1" 200 253908
+Finished Request
+DELETE http://127.0.0.1:51315/session/3a44a011-1233-4146-b425-c7abc22760a1/window {}
+http://127.0.0.1:51315 "DELETE /session/3a44a011-1233-4146-b425-c7abc22760a1/window HTTP/1.1" 200 12
+Finished Request
+Starting new HTTPS connection (1): api.bseindia.com:443
+https://api.bseindia.com:443 "GET /BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=gainer&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all&GLtype=gainer&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all HTTP/1.1" 200 None
+Starting new HTTPS connection (1): api.bseindia.com:443
+https://api.bseindia.com:443 "GET /BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=loser&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all&GLtype=loser&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all HTTP/1.1" 200 None
