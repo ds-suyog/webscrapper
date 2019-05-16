@@ -7,6 +7,7 @@ versions:
 python 3.5.2      
 requests 2.21.0     
 beautifulsoup4 4.7.1      
+selenium 3.141.0
 Scrapy 1.6.0       
 
 What webscrapper does:         
