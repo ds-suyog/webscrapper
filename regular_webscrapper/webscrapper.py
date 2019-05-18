@@ -5,20 +5,14 @@ import logging
 import json
 import git 
 from pymongo import MongoClient
-import constant
 import os
+import git, sys; sys.path.append("{}/regular_webscrapper".format(git.Repo('.', search_parent_directories=True).working_tree_dir))
+import constant
 import time
 from elasticsearch import helpers, Elasticsearch
 
 class Webscrapper:
 
-	_gitbase = git.Repo('.', search_parent_directories=True).working_tree_dir
-	_basedir = "{}/regular_webscrapper".format(_gitbase)
-	_logpath = {'crawl': '{}/logs/crawl.log'.format(_basedir),
-				'parse': '{}/logs/parse.log'.format(_basedir),
-				'geckodriver': '{}/logs/geckodriver.log'.format(_basedir),
-				'mongo': '{}/logs/mongo.log'.format(_basedir)
-				}
 	_geckodriver_bin = '{}/bin/geckodriver'.format(_basedir) 
 
 	def __init__(self):
@@ -29,7 +23,7 @@ class Webscrapper:
 		logger.debug("\n\n====================	 crawling started  ==========================")	
 		logger.info("selemium emulating firefox browser")
 
-		driver = webdriver.Firefox(executable_path=r'{}'.format(Webscrapper._geckodriver_bin), log_path='{}'.format(Webscrapper._logpath['geckodriver']))
+		driver = webdriver.Firefox(executable_path=r'{}'.format(constant.GECKODRIVER_BIN), log_path='{}'.format(constant.LOGPATH['geckodriver']))
 		page = driver.get(constant.BASE_URL)
 		link = driver.find_element_by_link_text('Trending')
 		link.click()
@@ -114,7 +108,7 @@ class Webscrapper:
 	def getlogger(self, task):
 		logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)		
 		logger = logging.getLogger()	
-		fileh = logging.FileHandler(Webscrapper._logpath[task], 'w')
+		fileh = logging.FileHandler(constant.LOGPATH[task], 'w')
 		for hdlr in logger.handlers[:]:  # remove all old handlers
   		    logger.removeHandler(hdlr)		
 		logger.handlers = [fileh]
