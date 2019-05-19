@@ -44,6 +44,7 @@ class Webscrapper:
 			f.write(page_l.text)	
 		logger.info("crawling completed!")
 
+
 	def parse(self): 
 		logger = self.getlogger('parse')		
 		logger.debug("\n\n=================================	parsing started")	
@@ -55,7 +56,6 @@ class Webscrapper:
 		div_u2d1 = soup.find_all('div', id = 'u2_d1')	
 		trending = [ {'_id': self.crypt(anc.text), 'name': anc.text} for rank, anc in enumerate(div_u2d1[0].find_all('a'))]
 		self.insert_one(trending, 'trending')
-		#logger.debug("trending stocks:\n %s" % (str(trending)))
 		os.remove("tmp/base_page_after_click.html")
 
 		logger.debug("parsing gainers")
@@ -80,7 +80,6 @@ class Webscrapper:
 			top_gainer_names.append(document['security_name'])
 		lst_g = ["%s.%s"%(i+1,v) for i,v in enumerate(top_gainer_names)]
 		self.insert_one(gainers, 'gainers')		
-		#logger.debug("top 10 gainers: \n %s" % (str(lst_g)))
 		os.remove('tmp/content_gainer.html')
 
 		logger.debug("parsing loosers")
@@ -95,10 +94,8 @@ class Webscrapper:
 		for doc in looser_content[0:10]:
 			values = [doc['scrip_cd'], doc['scripname'], doc['scrip_grp'], doc['ltradert'], doc['change_val'], doc['change_percent']]
 			loosers.append(dict(zip(keys,values)))
-			#top_looser_names.append(rec['security_name'])
 		lst_l = ["%s.%s"%(i+1,v['security_name']) for i,v in enumerate(loosers)]		
 		self.insert_one(loosers, 'loosers')
-		#logger.debug("top 10 loosers: \n %s" % (str(lst_l)))
 		os.remove("tmp/content_looser.html")
 		logger.info("parsing completed!!")
 
@@ -107,7 +104,7 @@ class Webscrapper:
 		logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)
 		logger = logging.getLogger()
 		fileh = logging.FileHandler(constant.LOGPATH[task], 'w') if resume == 'False' else logging.FileHandler(constant.LOGPATH[task], 'a')
-		for hdlr in logger.handlers[:]:  # remove all old handlers
+		for hdlr in logger.handlers[:]:
   		    logger.removeHandler(hdlr)		
 		logger.handlers = [fileh]
 		return logger
@@ -136,7 +133,6 @@ class Webscrapper:
 				result = mydb[colname].insert_one(doc)							
 			except Exception as e:
 				pass									
-		#print('collection {} doc count after insert is : {}'.format(colname, mydb[colname].count()))
 
 	def insert_many(self, data, colname):
 		myclient, mydb, mycol = self.getmongoclient(colname)
@@ -167,7 +163,7 @@ class Webscrapper:
 		os.system('ls {}}/tmp/bse'.format(constant.BASEDIR))
 		self.mongoimportjson(colname, filepath.replace('bson','json'))
 
-	def bulk_inser(self, data):
+	def bulk_insert(self, data):
 		#..
 		#..
 		pass
@@ -176,7 +172,6 @@ def main():
 	ws = Webscrapper()	
 	ws.crawl()
 	ws.parse()
-	#ws.mongodumpjson('trending', "tmp/bse/{}.json".format('trending'))
 
 if __name__ == '__main__':
 	main()
