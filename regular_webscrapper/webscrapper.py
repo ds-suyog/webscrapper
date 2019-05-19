@@ -13,21 +13,19 @@ from elasticsearch import helpers, Elasticsearch
 
 class Webscrapper:
 
-	_geckodriver_bin = '{}/bin/geckodriver'.format(_basedir) 
-
 	def __init__(self):
 		pass				
 
 	def crawl(self):
 		logger = self.getlogger('crawl')			
-		logger.debug("\n\n====================	 crawling started  ==========================")	
+		logger.debug("\n\n================================= crawling started")	
 		logger.info("selemium emulating firefox browser")
 
-		driver = webdriver.Firefox(executable_path=r'{}'.format(constant.GECKODRIVER_BIN), log_path='{}'.format(constant.LOGPATH['geckodriver']))
+		driver = webdriver.Firefox(executable_path=r"{}".format(constant.GECKODRIVER_BIN), log_path='{}'.format(constant.LOGPATH['geckodriver']))
 		page = driver.get(constant.BASE_URL)
 		link = driver.find_element_by_link_text('Trending')
 		link.click()
-		driver.implicitly_wait(3)
+		driver.implicitly_wait(7)
 		html_source = driver.page_source
 		with open ("tmp/base_page_after_click.html", 'w') as f:	
 			f.write(html_source)
@@ -44,11 +42,11 @@ class Webscrapper:
 		page_l.raise_for_status()	
 		with open("tmp/content_looser.html", 'w') as f:
 			f.write(page_l.text)	
-		logger.info("-----------------    crawling completed     -------------")
+		logger.info("crawling completed!")
 
 	def parse(self): 
 		logger = self.getlogger('parse')		
-		logger.debug("\n\n======================	parsing started		============================")	
+		logger.debug("\n\n=================================	parsing started")	
 
 		logger.debug("parsing trending")
 		with open ("tmp/base_page_after_click.html", 'r', encoding="utf8") as f:	
@@ -102,13 +100,13 @@ class Webscrapper:
 		self.insert_one(loosers, 'loosers')
 		#logger.debug("top 10 loosers: \n %s" % (str(lst_l)))
 		os.remove("tmp/content_looser.html")
-		logger.info("parsing completed.................................")
+		logger.info("parsing completed!!")
 
 
-	def getlogger(self, task):
-		logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)		
-		logger = logging.getLogger()	
-		fileh = logging.FileHandler(constant.LOGPATH[task], 'w')
+	def getlogger(self, task, resume = 'False'):
+		logging.basicConfig(format='%(asctime)s %(message)s',level=logging.DEBUG)
+		logger = logging.getLogger()
+		fileh = logging.FileHandler(constant.LOGPATH[task], 'w') if resume == 'False' else logging.FileHandler(constant.LOGPATH[task], 'a')
 		for hdlr in logger.handlers[:]:  # remove all old handlers
   		    logger.removeHandler(hdlr)		
 		logger.handlers = [fileh]
@@ -122,15 +120,11 @@ class Webscrapper:
 		return ''.join(keyy)
 
 	def getmongoclient(self, colname):
-		MONGODB_HOST = 'localhost'
-		MONGODB_PORT = 27017
-		DB_NAME = 'bse'
-		try: 
-			myclient = MongoClient(MONGODB_HOST, MONGODB_PORT)
-			print("Connected to Mongodb successfully!!!") 
-		except:   
-			print("Could not connect to MongoDB") 
-		mydb = myclient[DB_NAME]
+		try:
+			myclient = MongoClient(constant.MONGODB_HOST, constant.MONGODB_PORT) 
+		except:
+			pass
+		mydb = myclient[constant.BSE_DB]
 		mycol = mydb[colname]
 		return myclient, mydb, mycol
 
@@ -142,7 +136,7 @@ class Webscrapper:
 				result = mydb[colname].insert_one(doc)							
 			except Exception as e:
 				pass									
-		print('collection {} doc count after insert is : {}'.format(colname, mydb[colname].count()))
+		#print('collection {} doc count after insert is : {}'.format(colname, mydb[colname].count()))
 
 	def insert_many(self, data, colname):
 		myclient, mydb, mycol = self.getmongoclient(colname)
@@ -170,7 +164,7 @@ class Webscrapper:
 	def mongoimportbson(self, colname, filepath):
 		myCmd = 'bsondump {} > {}'.format(filepath, filepath.replace('bson','json'))
 		os.system(myCmd)
-		os.system('ls /home/suyog/github/webscrapper/regular_webscrapper/tmp/bse')
+		os.system('ls {}}/tmp/bse'.format(constant.BASEDIR))
 		self.mongoimportjson(colname, filepath.replace('bson','json'))
 
 	def bulk_inser(self, data):
