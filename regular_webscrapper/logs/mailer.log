@@ -1,0 +1,18 @@
+
+
+==============================================================  CHECKING/MONITORING MAIL
+RECEIVED EMAIL FROM CLIENT: Suyog Sethia 
+sender_data: Suyog Sethia <ssethia86@gmail.com>
+sender_name: Suyog Sethia 
+sender_emailaddr: ssethia86@gmail.com
+subject: requesting key analysis for db 'bse'
+body: 
+
+REQUEST TYPE: db collection keys analysis report request
+sending acknowledgement to client
+processing request
+generating report
+sending report to client
+report sent.
+
+
