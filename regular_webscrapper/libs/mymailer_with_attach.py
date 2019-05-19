@@ -10,8 +10,8 @@ def send_mail(toaddr, fname, fpath, subject, body, fromaddr=constant.WORKER_EMAI
 	msg = MIMEMultipart()  
 	msg['From'] = fromaddr  
 	msg['To'] = toaddr   
-	msg['Subject'] = subject#"webscrapper status report" 
-	body = body#"webscrapper status report is in attachment"
+	msg['Subject'] = subject
+	body = body
 	msg.attach(MIMEText(body, 'plain')) 
 
 	attachment = open(fpath, "rb") 
