@@ -1,0 +1,41 @@
+REPORT: database keys statistics
+[time stamp] May 19, 2019  23:50:00
+
+COLLECTION: trending
+total documents: 25
+key stats: 
+| fieldname   | type   |   frequency |
+|-------------+--------+-------------|
+| _id         | str    |          25 |
+| name        | str    |          25 |
+
+
+COLLECTION: gainers
+total documents: 10
+key stats: 
+| fieldname         | type     |   frequency |
+|-------------------+----------+-------------|
+| _id               | ObjectId |          10 |
+| change_perc       | float    |          10 |
+| change_val        | float    |          10 |
+| group             | str      |          10 |
+| last_traded_price | float    |          10 |
+| rank              | int      |          10 |
+| security_code     | int      |          10 |
+| security_name     | str      |          10 |
+
+
+COLLECTION: loosers
+total documents: 10
+key stats: 
+| fieldname         | type     |   frequency |
+|-------------------+----------+-------------|
+| _id               | ObjectId |          10 |
+| change_percent    | float    |          10 |
+| change_val        | float    |          10 |
+| group             | str      |          10 |
+| last_traded_price | float    |          10 |
+| security_code     | int      |          10 |
+| security_name     | str      |          10 |
+
+

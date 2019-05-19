@@ -1,0 +1,60 @@
+REPORT: BSE top 10 gainers, top 10 loosers and trending
+[time stamp] May 19, 2019  21:54:15
+
+COLLECTION: trending
+| Name       |
+|------------|
+| AUROPHARMA |
+| BAJAJ-AUTO |
+| BAJAJFINSV |
+| BAJFINANCE |
+| BANKINDIA  |
+| BLISSGVS   |
+| BLUEDART   |
+| CENTRALBK  |
+| CHAMBLFERT |
+| CUB        |
+| DELTACORP  |
+| DRREDDY    |
+| GPPL       |
+| HFCL       |
+| IBVENTURES |
+| INDIGO     |
+| IOC        |
+| JKTYRE     |
+| JSWENERGY  |
+| LALPATHLAB |
+| MINDAIND   |
+| PHILIPCARB |
+| SOBHA      |
+| TATAGLOBAL |
+| VENKYS     |
+
+COLLECTION: gainers
+|   Rank | Name       |
+|--------+------------|
+|      1 | IBVENTURES |
+|      2 | SHIVTEX    |
+|      3 | INDRENEW   |
+|      4 | GALLISPAT  |
+|      5 | JINDWORLD  |
+|      6 | UFO        |
+|      7 | TI         |
+|      8 | CHAMBLFERT |
+|      9 | TAMBOLI    |
+|     10 | VELHO      |
+
+COLLECTION: loosers
+|   Rank | Name       |
+|--------+------------|
+|      1 | HIMTEK     |
+|      2 | KRITINUT   |
+|      3 | CORPOCO    |
+|      4 | DELTACORP  |
+|      5 | SASTASUNDR |
+|      6 | SUNRETAIL  |
+|      7 | DAAWAT     |
+|      8 | EMAMIREAL  |
+|      9 | RMCL       |
+|     10 | IRIS       |
+
