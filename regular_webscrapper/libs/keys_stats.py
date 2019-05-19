@@ -13,14 +13,13 @@ class Generate:
         mydb = myclient[dbname]
         return myclient, mydb
 
-    def get_coll_keys_stats(self, dbname):            
+    def get_coll_keys_stats(self, dbname):          
         myclient, mydb = self.getmongoclient(dbname)    
-        colls = mydb.list_collection_names() 
+        colls = mydb.list_collection_names()
         for collname in colls:
             self.get_keys_stats(dbname, collname)
-        
 
-    def get_keys_stats(self, dbname, collname):   
+    def get_keys_stats(self, dbname, collname):
         myclient, mydb = self.getmongoclient(dbname) 
         mycoll = mydb[collname]
         all_keys = set()
