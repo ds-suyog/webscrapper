@@ -16,7 +16,6 @@ class Generate:
         myclient, mydb = self.getmongoclient(dbname)    
         colls = mydb.list_collection_names()     
         for collname in colls:
-            #print("processing collection: {}".format(colname))
             self.single_coll_report(dbname, collname)
 
     def single_coll_report(self, dbname, colname):
@@ -60,7 +59,5 @@ def main():
 if __name__ == '__main__':
     main()
 
-# pymongo error: bson.errors.InvalidBSON: 'utf8' codec can't decode byte 0xa1
-# added in pymongoclient to resolve that:  unicode_decode_error_handler='ignore'
 
 

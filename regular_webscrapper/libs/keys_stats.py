@@ -75,7 +75,7 @@ def getlogger(task, resume = 'False'):
 def main(db):
     gn = Generate()  
     with open(constant.REPORT_KEYS_FPATH, 'w') as f:
-        f.write("REPORT: database keys statistics".format())
+        f.write("REPORT: database {} keys statistics".format(db))
         f.write("\n[time stamp] {}\n\n".format(datetime.now().strftime("%B %d, %Y  %H:%M:%S")))
     gn.get_coll_keys_stats(db)                    
 
