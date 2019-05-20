@@ -1,4 +1,8 @@
 import git
+try:
+	import credentials
+except:
+	pass
 
 GITBASE = git.Repo('.', search_parent_directories=True).working_tree_dir
 BASEDIR = "{}/regular_webscrapper".format(GITBASE)
@@ -7,8 +11,9 @@ BASE_URL = "https://www.bseindia.com/"
 URL_GAINER = "https://api.bseindia.com/BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=gainer&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all"
 URL_LOOSER = "https://api.bseindia.com/BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=loser&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all"
 
-WORKER_EMAIL = "your worker email address"
-WORKER_PASS = "password"
+WORKER_EMAIL = credentials.WORKER_EMAIL
+WORKER_PASS = credentials.WORKER_PASS
+
 SKS_EMAIL = "..."
 KKR_EMAIL = "..."
 
