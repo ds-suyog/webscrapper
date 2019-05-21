@@ -5,7 +5,6 @@ this Jobqueue module provides job-queue functionality
 class Job_Queue(object):
 
 	def __init__(self, max_running):
-		print("initializing.............")
 		self._queued = []
 		self._running = []
 		self._max = max_running
@@ -121,14 +120,11 @@ def try_using(parallel_type):
 		print("starting worker..")
 		print("num = {}".format(num))
 
-	worker = {'type': ''}
 	if parallel_type == "multiprocessing":
 		from multiprocessing import Process as Bucket
-		worker['type'] = "process"
 
 	elif parallel_type == "threading":
 		from threading import Thread as Bucket
-		worker['type'] = "thread"
 
 	jobs = Job_Queue(2)
 	jobs._debug = False
