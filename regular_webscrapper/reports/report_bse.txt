@@ -1,60 +1,60 @@
 REPORT: BSE top 10 gainers, top 10 loosers and trending
-[time stamp] May 22, 2019  05:31:04
+[time stamp] May 22, 2019  19:27:48
 
 COLLECTION: trending
 | Name       |
 |------------|
-| ADANIPORTS |
-| AXISBANK   |
-| BAJAJFINSV |
+| AARTIIND   |
+| AMARAJABAT |
+| BAJAJHLDNG |
 | BHARATFIN  |
-| BLISSGVS   |
+| BOSCHLTD   |
+| CROMPTON   |
 | CUB        |
-| HDFCBANK   |
-| HEG        |
-| HEIDELBERG |
-| IBVENTURES |
-| JKCEMENT   |
-| JUBILANT   |
+| DCMSHRIRAM |
+| DHANUKA    |
+| DHFL       |
+| DISHTV     |
+| ERIS       |
+| FORTIS     |
+| GPPL       |
+| IFCI       |
+| INDUSINDBK |
+| JBCHEPHARM |
+| JINDALSTEL |
 | JUSTDIAL   |
-| LAKSHVILAS |
-| LAXMIMACH  |
-| SBIN       |
-| SIEMENS    |
-| SYNGENE    |
-| TATAMOTORS |
-| TATAMTRDVR |
-| TITAN      |
-| TORNTPHARM |
-| TRITURBINE |
-| UBL        |
-| WABAG      |
+| KEC        |
+| KEI        |
+| NBVENTURES |
+| SHREECEM   |
+| SYMPHONY   |
+| TIMKEN     |
 
 COLLECTION: gainers
 |   Rank | Name       |
 |--------+------------|
-|      1 | BLBLIMITED |
-|      2 | MILEFUR    |
-|      3 | ASYL       |
-|      4 | BABA       |
-|      5 | JETAIRWAYS |
-|      6 | SUMEETINDS |
-|      7 | CAREERP    |
-|      8 | SGIL       |
-|      9 | HPL        |
-|     10 | AEL        |
+|      1 | FILTRA     |
+|      2 | TIMKEN     |
+|      3 | DCM        |
+|      4 | ASIIL      |
+|      5 | BLBLIMITED |
+|      6 | VIKASMCORP |
+|      7 | COUNCODOS  |
+|      8 | ALKALI     |
+|      9 | GOKEX      |
+|     10 | UFO        |
 
 COLLECTION: loosers
-|   Rank | Name       |
-|--------+------------|
-|      1 | SMGOLD     |
-|      2 | IDFSENSEXE |
-|      3 | ACML       |
-|      4 | RMCL       |
-|      5 | PANCHMAHQ  |
-|      6 | TIGERLOGS  |
-|      7 | NARAYANI   |
-|      8 | SHREEPUSHK |
-|      9 | RAMASTEEL  |
-|     10 | DHRUV      |
+|   Rank | Name      |
+|--------+-----------|
+|      1 | TITAANIUM |
+|      2 | EVERESTO  |
+|      3 | BTTL      |
+|      4 | DIVSHKT   |
+|      5 | NRAGRINDQ |
+|      6 | INDOUS    |
+|      7 | CHROMATIC |
+|      8 | DHFL      |
+|      9 | CRPRISK   |
+|     10 | NEWLIGHT  |
 
