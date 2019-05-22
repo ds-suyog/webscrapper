@@ -2,30 +2,30 @@
 
 ================================= crawling started
 selemium emulating firefox browser
-POST http://127.0.0.1:57363/session {"capabilities": {"alwaysMatch": {"acceptInsecureCerts": true, "browserName": "firefox"}, "firstMatch": [{}]}, "desiredCapabilities": {"marionette": true, "acceptInsecureCerts": true, "browserName": "firefox"}}
-Starting new HTTP connection (1): 127.0.0.1:57363
-http://127.0.0.1:57363 "POST /session HTTP/1.1" 200 682
+POST http://127.0.0.1:48871/session {"desiredCapabilities": {"marionette": true, "browserName": "firefox", "acceptInsecureCerts": true}, "capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true}}}
+Starting new HTTP connection (1): 127.0.0.1:48871
+http://127.0.0.1:48871 "POST /session HTTP/1.1" 200 681
 Finished Request
-POST http://127.0.0.1:57363/session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/url {"url": "https://www.bseindia.com/"}
-http://127.0.0.1:57363 "POST /session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/url HTTP/1.1" 200 14
+POST http://127.0.0.1:48871/session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/url {"url": "https://www.bseindia.com/"}
+http://127.0.0.1:48871 "POST /session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/url HTTP/1.1" 200 14
 Finished Request
-POST http://127.0.0.1:57363/session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/element {"using": "link text", "value": "Trending"}
-http://127.0.0.1:57363 "POST /session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/element HTTP/1.1" 200 88
+POST http://127.0.0.1:48871/session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/element {"using": "link text", "value": "Trending"}
+http://127.0.0.1:48871 "POST /session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/element HTTP/1.1" 200 88
 Finished Request
-POST http://127.0.0.1:57363/session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/element/847d8c8b-18f8-46e3-8108-200d4d695c3d/click {"id": "847d8c8b-18f8-46e3-8108-200d4d695c3d"}
-http://127.0.0.1:57363 "POST /session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/element/847d8c8b-18f8-46e3-8108-200d4d695c3d/click HTTP/1.1" 200 14
+POST http://127.0.0.1:48871/session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/element/f9a1637f-84fa-405a-9af1-ef45a8e8d202/click {"id": "f9a1637f-84fa-405a-9af1-ef45a8e8d202"}
+http://127.0.0.1:48871 "POST /session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/element/f9a1637f-84fa-405a-9af1-ef45a8e8d202/click HTTP/1.1" 200 14
 Finished Request
-POST http://127.0.0.1:57363/session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/timeouts {"implicit": 10000}
-http://127.0.0.1:57363 "POST /session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/timeouts HTTP/1.1" 200 14
+POST http://127.0.0.1:48871/session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/timeouts {"implicit": 10000}
+http://127.0.0.1:48871 "POST /session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/timeouts HTTP/1.1" 200 14
 Finished Request
-GET http://127.0.0.1:57363/session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/source {}
-http://127.0.0.1:57363 "GET /session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/source HTTP/1.1" 200 250037
+GET http://127.0.0.1:48871/session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/source {}
+http://127.0.0.1:48871 "GET /session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/source HTTP/1.1" 200 244611
 Finished Request
-DELETE http://127.0.0.1:57363/session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/window {}
-http://127.0.0.1:57363 "DELETE /session/ec6d40be-ed9f-40c3-a0a7-d4f920bdac8a/window HTTP/1.1" 200 12
+DELETE http://127.0.0.1:48871/session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/window {}
+http://127.0.0.1:48871 "DELETE /session/81d4dd19-03db-447c-9f41-0ef57b6dd9d0/window HTTP/1.1" 200 12
 Finished Request
 Starting new HTTPS connection (1): api.bseindia.com:443
-https://api.bseindia.com:443 "GET /BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=gainer&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all&GLtype=gainer&IndxGrp=AllMkt&orderby=all&IndxGrpval=AllMkt HTTP/1.1" 200 None
+https://api.bseindia.com:443 "GET /BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=gainer&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all&GLtype=gainer&IndxGrpval=AllMkt&IndxGrp=AllMkt&orderby=all HTTP/1.1" 200 None
 Starting new HTTPS connection (1): api.bseindia.com:443
-https://api.bseindia.com:443 "GET /BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=loser&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all&GLtype=loser&IndxGrp=AllMkt&orderby=all&IndxGrpval=AllMkt HTTP/1.1" 200 None
+https://api.bseindia.com:443 "GET /BseIndiaAPI/api/MktRGainerLoserData/w?GLtype=loser&IndxGrp=AllMkt&IndxGrpval=AllMkt&orderby=all&GLtype=loser&IndxGrpval=AllMkt&IndxGrp=AllMkt&orderby=all HTTP/1.1" 200 None
 crawling completed!
