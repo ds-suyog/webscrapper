@@ -1,60 +1,60 @@
 REPORT: BSE top 10 gainers, top 10 loosers and trending
-[time stamp] May 22, 2019  05:14:45
+[time stamp] May 22, 2019  05:31:04
 
 COLLECTION: trending
 | Name       |
 |------------|
-| AUROPHARMA |
-| BAJAJ-AUTO |
+| ADANIPORTS |
+| AXISBANK   |
 | BAJAJFINSV |
-| BAJFINANCE |
-| BANKINDIA  |
+| BHARATFIN  |
 | BLISSGVS   |
-| BLUEDART   |
-| CENTRALBK  |
-| CHAMBLFERT |
 | CUB        |
-| DELTACORP  |
-| DRREDDY    |
-| GPPL       |
-| HFCL       |
+| HDFCBANK   |
+| HEG        |
+| HEIDELBERG |
 | IBVENTURES |
-| INDIGO     |
-| IOC        |
-| JKTYRE     |
-| JSWENERGY  |
-| LALPATHLAB |
-| MINDAIND   |
-| PHILIPCARB |
-| SOBHA      |
-| TATAGLOBAL |
-| VENKYS     |
+| JKCEMENT   |
+| JUBILANT   |
+| JUSTDIAL   |
+| LAKSHVILAS |
+| LAXMIMACH  |
+| SBIN       |
+| SIEMENS    |
+| SYNGENE    |
+| TATAMOTORS |
+| TATAMTRDVR |
+| TITAN      |
+| TORNTPHARM |
+| TRITURBINE |
+| UBL        |
+| WABAG      |
 
 COLLECTION: gainers
 |   Rank | Name       |
 |--------+------------|
-|      1 | IBVENTURES |
-|      2 | SHIVTEX    |
-|      3 | INDRENEW   |
-|      4 | GALLISPAT  |
-|      5 | JINDWORLD  |
-|      6 | UFO        |
-|      7 | TI         |
-|      8 | CHAMBLFERT |
-|      9 | TAMBOLI    |
-|     10 | VELHO      |
+|      1 | BLBLIMITED |
+|      2 | MILEFUR    |
+|      3 | ASYL       |
+|      4 | BABA       |
+|      5 | JETAIRWAYS |
+|      6 | SUMEETINDS |
+|      7 | CAREERP    |
+|      8 | SGIL       |
+|      9 | HPL        |
+|     10 | AEL        |
 
 COLLECTION: loosers
 |   Rank | Name       |
 |--------+------------|
-|      1 | HIMTEK     |
-|      2 | KRITINUT   |
-|      3 | CORPOCO    |
-|      4 | DELTACORP  |
-|      5 | SASTASUNDR |
-|      6 | SUNRETAIL  |
-|      7 | DAAWAT     |
-|      8 | EMAMIREAL  |
-|      9 | RMCL       |
-|     10 | IRIS       |
+|      1 | SMGOLD     |
+|      2 | IDFSENSEXE |
+|      3 | ACML       |
+|      4 | RMCL       |
+|      5 | PANCHMAHQ  |
+|      6 | TIGERLOGS  |
+|      7 | NARAYANI   |
+|      8 | SHREEPUSHK |
+|      9 | RAMASTEEL  |
+|     10 | DHRUV      |
 

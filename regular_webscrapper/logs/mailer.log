@@ -18,3 +18,5 @@ subject: requesting key analysis for db 'bse'
 body: 
 
 starting worker for request type: db collection keys analysis report request
+jobs processed!
+

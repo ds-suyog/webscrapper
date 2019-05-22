@@ -25,7 +25,7 @@ class Webscrapper:
 		page = driver.get(constant.BASE_URL)
 		link = driver.find_element_by_link_text('Trending')
 		link.click()
-		driver.implicitly_wait(7)
+		driver.implicitly_wait(10)
 		html_source = driver.page_source
 		with open ("tmp/base_page_after_click.html", 'w') as f:	
 			f.write(html_source)

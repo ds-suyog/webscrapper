@@ -59,6 +59,7 @@ def check_mail(fromaddr=constant.WORKER_EMAIL, password=constant.WORKER_PASS):
                 		)
     jobs.close()
     jobs.start()
+    logger.debug("jobs processed!\n")
 
     try:
         M.close()

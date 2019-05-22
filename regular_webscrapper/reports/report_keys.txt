@@ -1,5 +1,5 @@
 REPORT: database bse keys statistics
-[time stamp] May 22, 2019  05:14:44
+[time stamp] May 22, 2019  05:30:49
 
 COLLECTION: trending
 total documents: 25
@@ -15,14 +15,14 @@ total documents: 10
 key stats: 
 | fieldname         | type     |   frequency | sample                                                                                                                                                                                               |
 |-------------------+----------+-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| _id               | ObjectId |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
-| change_perc       | float    |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
-| change_val        | float    |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
-| group             | str      |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
-| last_traded_price | float    |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
-| rank              | int      |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
-| security_code     | int      |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
-| security_name     | str      |          10 | {'change_val': 47.1, 'security_code': 532960, 'rank': 1, 'last_traded_price': 298.4, 'change_perc': 18.74, 'security_name': 'IBVENTURES', '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'group': 'B'} |
+| _id               | ObjectId |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
+| change_perc       | float    |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
+| change_val        | float    |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
+| group             | str      |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
+| last_traded_price | float    |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
+| rank              | int      |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
+| security_code     | int      |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
+| security_name     | str      |          10 | {'group': 'B', 'security_code': 532960, 'change_perc': 18.74, 'last_traded_price': 298.4, 'change_val': 47.1, '_id': ObjectId('5ce1832f5f1c04dcf3a682d8'), 'security_name': 'IBVENTURES', 'rank': 1} |
 
 
 COLLECTION: loosers
@@ -30,12 +30,12 @@ total documents: 10
 key stats: 
 | fieldname         | type     |   frequency | sample                                                                                                                                                                                      |
 |-------------------+----------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| _id               | ObjectId |          10 | {'security_code': 505712, 'security_name': 'HIMTEK', 'change_percent': -19.14, 'change_val': -20.65, 'last_traded_price': 87.25, '_id': ObjectId('5ce1832f5f1c04dcf3a682e3'), 'group': 'X'} |
-| change_percent    | float    |          10 | {'security_code': 505712, 'security_name': 'HIMTEK', 'change_percent': -19.14, 'change_val': -20.65, 'last_traded_price': 87.25, '_id': ObjectId('5ce1832f5f1c04dcf3a682e3'), 'group': 'X'} |
-| change_val        | float    |          10 | {'security_code': 505712, 'security_name': 'HIMTEK', 'change_percent': -19.14, 'change_val': -20.65, 'last_traded_price': 87.25, '_id': ObjectId('5ce1832f5f1c04dcf3a682e3'), 'group': 'X'} |
-| group             | str      |          10 | {'security_code': 505712, 'security_name': 'HIMTEK', 'change_percent': -19.14, 'change_val': -20.65, 'last_traded_price': 87.25, '_id': ObjectId('5ce1832f5f1c04dcf3a682e3'), 'group': 'X'} |
-| last_traded_price | float    |          10 | {'security_code': 505712, 'security_name': 'HIMTEK', 'change_percent': -19.14, 'change_val': -20.65, 'last_traded_price': 87.25, '_id': ObjectId('5ce1832f5f1c04dcf3a682e3'), 'group': 'X'} |
-| security_code     | int      |          10 | {'security_code': 505712, 'security_name': 'HIMTEK', 'change_percent': -19.14, 'change_val': -20.65, 'last_traded_price': 87.25, '_id': ObjectId('5ce1832f5f1c04dcf3a682e3'), 'group': 'X'} |
-| security_name     | str      |          10 | {'security_code': 505712, 'security_name': 'HIMTEK', 'change_percent': -19.14, 'change_val': -20.65, 'last_traded_price': 87.25, '_id': ObjectId('5ce1832f5f1c04dcf3a682e3'), 'group': 'X'} |
+| _id               | ObjectId |          10 | {'group': 'X', 'change_percent': -19.14, 'last_traded_price': 87.25, 'security_code': 505712, 'change_val': -20.65, 'security_name': 'HIMTEK', '_id': ObjectId('5ce1832f5f1c04dcf3a682e3')} |
+| change_percent    | float    |          10 | {'group': 'X', 'change_percent': -19.14, 'last_traded_price': 87.25, 'security_code': 505712, 'change_val': -20.65, 'security_name': 'HIMTEK', '_id': ObjectId('5ce1832f5f1c04dcf3a682e3')} |
+| change_val        | float    |          10 | {'group': 'X', 'change_percent': -19.14, 'last_traded_price': 87.25, 'security_code': 505712, 'change_val': -20.65, 'security_name': 'HIMTEK', '_id': ObjectId('5ce1832f5f1c04dcf3a682e3')} |
+| group             | str      |          10 | {'group': 'X', 'change_percent': -19.14, 'last_traded_price': 87.25, 'security_code': 505712, 'change_val': -20.65, 'security_name': 'HIMTEK', '_id': ObjectId('5ce1832f5f1c04dcf3a682e3')} |
+| last_traded_price | float    |          10 | {'group': 'X', 'change_percent': -19.14, 'last_traded_price': 87.25, 'security_code': 505712, 'change_val': -20.65, 'security_name': 'HIMTEK', '_id': ObjectId('5ce1832f5f1c04dcf3a682e3')} |
+| security_code     | int      |          10 | {'group': 'X', 'change_percent': -19.14, 'last_traded_price': 87.25, 'security_code': 505712, 'change_val': -20.65, 'security_name': 'HIMTEK', '_id': ObjectId('5ce1832f5f1c04dcf3a682e3')} |
+| security_name     | str      |          10 | {'group': 'X', 'change_percent': -19.14, 'last_traded_price': 87.25, 'security_code': 505712, 'change_val': -20.65, 'security_name': 'HIMTEK', '_id': ObjectId('5ce1832f5f1c04dcf3a682e3')} |
 
 
