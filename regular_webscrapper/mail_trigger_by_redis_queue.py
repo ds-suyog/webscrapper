@@ -16,14 +16,9 @@ def check_mail(fromaddr=constant.WORKER_EMAIL, password=constant.WORKER_PASS):
     dt = cutoff.strftime('%d-%b-%Y')
     typ, data = M.search(None, 'UNSEEN', '(SINCE %s) (OR FROM "ssethia86@gmail.com" FROM "iamkamleshrangi@gmail.com")'%(dt,))
 
-    #importing handmade job queue functionality
-    from job_queue import Job_Queue
-    jobs = Job_Queue(2)
-    jobs._debug = False    
-    from multiprocessing import Process as Bucket
-    #from threading import Thread as Bucket    
-    import worker_bse_report
-    import worker_keys_stats
+    #Implementing redis queue functionality
+    from rq import use_connection, Queue
+    use_connection()
 
     for num in data[0].split():
         typ, data = M.fetch(num, '(RFC822)')
@@ -40,26 +35,26 @@ def check_mail(fromaddr=constant.WORKER_EMAIL, password=constant.WORKER_PASS):
                     body = ','.join(str(v) for v in body) 
 
                 if sender_email in [constant.SKS_EMAIL, constant.KKR_EMAIL]:
-                	logger.debug("RECEIVED EMAIL FROM CLIENT: {}".format(sender_name))
-                	logger.debug("sender_data: {}\nsender_name: {}\nsender_emailaddr: {}\nsubject: {}\nbody: {}".format(sender_data, sender_name, sender_email, email_subject, body))
-                	sys.path.append("{}/libs".format(constant.BASEDIR))
-                	if re.search(r'(?i)bse\s?report' , email_subject):
-                		logger.debug("starting worker for request type: bse report!\n")
-                		jobs.append(Bucket(
-                    		target = worker_bse_report.Worker().run,
-                    		args = [sender_name, sender_email, email_subject, body],
-                    		kwargs = {},))
+                    logger.debug("RECEIVED EMAIL FROM CLIENT: {}".format(sender_name))
+                    logger.debug("sender_data: {}\nsender_name: {}\nsender_emailaddr: {}\nsubject: {}\nbody: {}".format(sender_data, sender_name, sender_email, email_subject, body))
+                    sys.path.append("{}/libs".format(constant.BASEDIR))
+                    if re.search(r'(?i)bse\s?report' , email_subject):
+                        logger.debug("starting worker for request type: bse report!\n")
+                        webscr = Queue('bse_webscrap')
+                        import worker_bse_report
+                        webscr.enqueue(worker_bse_report.Worker().run,
+                            args = (sender_name, sender_email, email_subject, body),
+                            kwargs = {},)
 
-                	if re.search(r'(?i)keys?\s?analysis' , email_subject):
-                		logger.debug("starting worker for request type: db collection keys analysis report request")
-                		jobs.append(Bucket(
-                			target = worker_keys_stats.Worker().run,
-                			args = [sender_name, sender_email, email_subject, body],
+                    if re.search(r'(?i)keys?\s?analysis' , email_subject):
+                        logger.debug("starting worker for request type: db collection keys analysis report request")
+                        key_stats = Queue('keys_stats')
+                        import worker_keys_stats
+                        key_stats.enqueue(worker_keys_stats.Worker().run,
+                			args = (sender_name, sender_email, email_subject, body),
                 			kwargs = {},)
-                		)
-    jobs.close()
-    jobs.start()
-    logger.debug("jobs processed!\n")
+
+    logger.debug("jobs pushed in redis queues!\n")
 
     try:
         M.close()
