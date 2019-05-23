@@ -30,12 +30,12 @@ response: app processes database collection's keys statistics, emails back tabul
 ## To run  ##
 setup virtual environment,
 ```
-source venv/bin/activate
+$source venv/bin/activate
 ```
 
 install dependencies,
 ```
-pip install requirements.txt
+$pip install requirements.txt
 ```
 
 Feed required emails in contant.py. Then simply execute one of the three scripts named mail_trigger... . If email from client is present in worker's email box, then resultant report will be emailed back. 
