@@ -71,7 +71,8 @@ def getlogger(task, resume = 'False'):
     logger.handlers = [fileh]
     return logger
   
-def main(db):
+def main():
+    db = ''
     gn = Generate()  
     with open(constant.REPORT_KEYS_FPATH, 'w') as f:
         f.write("REPORT: database {} keys statistics".format(db))
