@@ -38,7 +38,7 @@ install dependencies,
 $pip install requirements.txt
 ```
 
-Feed required emails in contant.py. Then simply execute one of the three scripts named mail_trigger... . If email from client is present in worker's email box, then resultant report will be emailed back. 
+Feed required emails in constant.py. Then simply execute one of the three scripts named mail_trigger... . If email from client is present in worker's email box, then resultant report will be emailed back. 
 ```
 $python mail_trigger....py
 ```
