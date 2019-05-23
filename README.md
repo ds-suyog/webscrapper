@@ -1,8 +1,8 @@
 # Smart Webscrapper Bot #   
 
-### Author: Suyog K Sethia ###
+#### Author: Suyog K Sethia ####
 
-## I wrote two Webscrappers ##
+## I wrote two smart Webscrappers ##
 1. By using requests + beautiful soup            
 2. By using Scrapy framework                  
 
