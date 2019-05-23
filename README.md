@@ -10,13 +10,12 @@
 app detects email from authorized clients, interprets request-type from email subject and body, processess the required request, and sends 'tabular' report through email back to respsective clients.    
 
 #### Sample request 1: bse report ####   
-response: app scraps top 10 gainers, top 10 loosers, and trending stocks from Bombay Stock Exchange(BSE)            
-app also provides processed response based on request   
+response: app scraps top 10 gainers, top 10 loosers, and trending stocks from Bombay Stock Exchange(BSE). App then emails back tabular report to respective clients.                 
 
 #### Sample request 2: db 'xx' statistics report ####    
-response: processs request, get database collection's keys statistics, sends report (format: tabular)
+response: app processes database collection's keys statistics, emails back tabular report to respective clients.    
 
-## workflow: ##
+## Workflow: ##
 1. App's worker detects email from authorized clients. It interprets request 'type' from email subject and body.
 2. app creates and auto-syncs jobs  (implemented both handmade job-queue and redis job-queue) 
 3. app processes jobs in background with workers through multithreading or multiprocessing (choice provided)
