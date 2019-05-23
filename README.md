@@ -49,10 +49,10 @@ requests 2.21.0
 beautifulsoup4 4.7.1                
 selenium 3.141.0          
 elasticsearch==7.0.1               
-Scrapy 1.6.0   
-redis==3.2.1
-rq==1.0
-rq-dashboard==0.5.1
+Scrapy 1.6.0     
+redis==3.2.1    
+rq==1.0    
+rq-dashboard==0.5.1    
 
 ### Note: webscrapper is for experiment purpose, with no intent of stealing data from BSE         ###
 
