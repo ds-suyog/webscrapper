@@ -1,4 +1,4 @@
-# Smart Webscrapper Bot #   
+# Smart Webscrapper Bots #   
 
 #### Author: Suyog K Sethia ####
 
@@ -10,10 +10,10 @@
 app detects email from authorized clients, interprets request-type from email subject and body, processess the required request, and sends 'tabular' report through email back to respsective clients.    
 
 #### Sample request 1: bse report ####   
-response: app scraps top 10 gainers, top 10 loosers, and trending stocks from Bombay Stock Exchange(BSE). App then emails back tabular report to respective clients.                 
+Response:  app scraps top 10 gainers, top 10 loosers, and trending stocks from Bombay Stock Exchange(BSE). App then emails back tabular report to respective clients.                 
 
 #### Sample request 2: db 'xx' statistics report ####    
-response: app processes database collection's keys statistics, emails back tabular report to respective clients.    
+Response:  app processes database collection's keys statistics, emails back tabular report to respective clients.    
 
 ## Workflow: ##
 1. App's worker detects email from authorized clients. It interprets request 'type' from email subject and body.
@@ -43,7 +43,7 @@ Feed required emails in constant.py. Then simply execute one of the three script
 $python mail_trigger....py
 ```
 
-### Versions ###         
+## Mentionable Versions ##         
 python 3.5.2           
 requests 2.21.0            
 beautifulsoup4 4.7.1                
