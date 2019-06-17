@@ -2,13 +2,111 @@
 
 =================================	parsing started
 parsing trending
+Starting new HTTP connection (1): localhost:9200
+http://localhost:9200 "POST /_bulk HTTP/1.1" 200 5213
+POST http://localhost:9200/_bulk [status:200 request:2.432s]
+> {"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"AMARAJABAT"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"APLLTD"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"APOLLOTYRE"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"ATUL"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"BAYERCROP"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"BBTC"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"BHARATFORG"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"BIOCON"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"BOSCHLTD"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"CARERATING"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"CENTRALBK"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"CENTRUM"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"COFFEEDAY"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"CYIENT"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"DHFL"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"ECLERX"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"EIDPARRY"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"ELGIEQUIP"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"EMAMILTD"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"ERIS"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"JETAIRWAYS"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"JKTYRE"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"JPASSOCIAT"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"MAHSCOOTER"}
+{"index":{"_type":"trending","_index":"bse_trending"}}
+{"name":"SRTRANSFIN"}
+
+< {"took":2427,"errors":false,"items":[{"index":{"_index":"bse_trending","_type":"trending","_id":"c3wPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"dHwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"dXwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"dnwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"d3wPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"eHwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"eXwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"enwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"e3wPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"fHwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"fXwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"fnwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"f3wPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":3,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"gHwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":3,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"gXwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":4,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"gnwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":3,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"g3wPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"hHwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":4,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"hXwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":4,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"hnwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"h3wPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":3,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"iHwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":4,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"iXwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":5,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"inwPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":5,"_primary_term":1,"status":201}},{"index":{"_index":"bse_trending","_type":"trending","_id":"i3wPZWsBuPZfKJwn4hnz","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":5,"_primary_term":1,"status":201}}]}
 parsing gainers
+Starting new HTTP connection (1): localhost:9200
+http://localhost:9200 "POST /_bulk HTTP/1.1" 200 2088
+POST http://localhost:9200/_bulk [status:200 request:2.755s]
+> {"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"AML","rank":1,"change_perc":20.0,"security_code":540923,"group":"M","change_val":0.68,"last_traded_price":4.08}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"AKM","rank":2,"change_perc":19.81,"security_code":540718,"group":"M","change_val":3.1,"last_traded_price":18.75}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"KARMAENG","rank":3,"change_perc":19.78,"security_code":533451,"group":"B","change_val":2.75,"last_traded_price":16.65}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"PRIME","rank":4,"change_perc":16.37,"security_code":540404,"group":"M","change_val":17.95,"last_traded_price":127.6}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"VRFILMS","rank":5,"change_perc":15.63,"security_code":542654,"group":"M","change_val":12.5,"last_traded_price":92.5}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"VIVOBIOT","rank":6,"change_perc":12.26,"security_code":511509,"group":"X","change_val":4.1,"last_traded_price":37.55}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"PRIMESECU","rank":7,"change_perc":11.05,"security_code":500337,"group":"B","change_val":3.9,"last_traded_price":39.2}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"PRIMEPRO","rank":8,"change_perc":10.96,"security_code":530695,"group":"X","change_val":1.95,"last_traded_price":19.75}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"BEARDSELL","rank":9,"change_perc":10.64,"security_code":539447,"group":"B","change_val":1.5,"last_traded_price":15.6}
+{"index":{"_type":"gainers","_index":"bse_gainers"}}
+{"security_name":"PICCADIL","rank":10,"change_perc":10.43,"security_code":530305,"group":"X","change_val":0.85,"last_traded_price":9.0}
+
+< {"took":2749,"errors":false,"items":[{"index":{"_index":"bse_gainers","_type":"gainers","_id":"jHwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"jXwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"jnwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"j3wPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"kHwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"kXwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"knwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"k3wPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"lHwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1,"status":201}},{"index":{"_index":"bse_gainers","_type":"gainers","_id":"lXwPZWsBuPZfKJwn7hlM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1,"status":201}}]}
 parsing loosers
+Starting new HTTP connection (1): localhost:9200
+http://localhost:9200 "POST /_bulk HTTP/1.1" 200 2088
+POST http://localhost:9200/_bulk [status:200 request:3.396s]
+> {"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"ALMONDZ","change_val":-4.25,"security_code":531400,"group":"B","change_percent":-19.95,"last_traded_price":17.05}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"NATFIT","change_val":-12.25,"security_code":531289,"group":"X","change_percent":-17.44,"last_traded_price":58.0}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"GARNETINT","change_val":-7.7,"security_code":512493,"group":"X","change_percent":-17.42,"last_traded_price":36.5}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"JETAIRWAYS","change_val":-13.75,"security_code":532617,"group":"A","change_percent":-16.76,"last_traded_price":68.3}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"NUTRA","change_val":-1.9,"security_code":524764,"group":"X","change_percent":-16.59,"last_traded_price":9.55}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"HUBTOWN","change_val":-3.85,"security_code":532799,"group":"B","change_percent":-16.35,"last_traded_price":19.7}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"KWALITY","change_val":-0.57,"security_code":531882,"group":"B","change_percent":-16.06,"last_traded_price":2.98}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"PCJEWELLER","change_val":-8.85,"security_code":534809,"group":"A","change_percent":-15.42,"last_traded_price":48.55}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"SRGHFL","change_val":-20.05,"security_code":534680,"group":"X","change_percent":-14.72,"last_traded_price":116.2}
+{"index":{"_type":"loosers","_index":"bse_loosers"}}
+{"security_name":"OILCOUNTUB","change_val":-1.22,"security_code":500313,"group":"B","change_percent":-14.7,"last_traded_price":7.08}
+
+< {"took":3392,"errors":false,"items":[{"index":{"_index":"bse_loosers","_type":"loosers","_id":"lnwPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"l3wPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"mHwPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"mXwPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"mnwPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"m3wPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"nHwPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"nXwPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"nnwPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":3,"_primary_term":1,"status":201}},{"index":{"_index":"bse_loosers","_type":"loosers","_id":"n3wPZWsBuPZfKJwn-xl6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}}]}
 parsing completed!!
-generating report
-sending report to client
-report sent!
-
-
-[32mbse_webscrap[39;49;00m: [34mJob OK[39;49;00m (fbce061a-51a4-42e2-ae06-b3cd0b0fa616)
-Result is kept for 500 seconds
