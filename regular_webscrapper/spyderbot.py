@@ -11,7 +11,7 @@ import constant
 import time
 from elasticsearch import helpers, Elasticsearch
 
-class Webscrapper:
+class SpyderBot:
 
 	def __init__(self):
 		pass				
@@ -56,6 +56,7 @@ class Webscrapper:
 		div_u2d1 = soup.find_all('div', id = 'u2_d1')	
 		trending = [ {'_id': self.crypt(anc.text), 'name': anc.text} for rank, anc in enumerate(div_u2d1[0].find_all('a'))]
 		self.insert_one(trending, 'trending')
+		self.bulk_insert(trending, 'bse_trending', 'trending')		
 		os.remove("tmp/base_page_after_click.html")
 
 		logger.debug("parsing gainers")
@@ -79,7 +80,8 @@ class Webscrapper:
 			gainers.append(document)
 			top_gainer_names.append(document['security_name'])
 		lst_g = ["%s.%s"%(i+1,v) for i,v in enumerate(top_gainer_names)]
-		self.insert_one(gainers, 'gainers')		
+		self.insert_one(gainers, 'gainers')
+		self.bulk_insert(gainers, 'bse_gainers', 'gainers')
 		os.remove('tmp/content_gainer.html')
 
 		logger.debug("parsing loosers")
@@ -96,6 +98,7 @@ class Webscrapper:
 			loosers.append(dict(zip(keys,values)))
 		lst_l = ["%s.%s"%(i+1,v['security_name']) for i,v in enumerate(loosers)]		
 		self.insert_one(loosers, 'loosers')
+		self.bulk_insert(loosers, 'bse_loosers', 'loosers')
 		os.remove("tmp/content_looser.html")
 		logger.info("parsing completed!!")
 
@@ -150,7 +153,6 @@ class Webscrapper:
 		myclient, mydb, mycol = self.getmongoclient(colname)	
 		with open(filepath, 'r', encoding="utf8") as f:
 			docs = json.load(f)
-			print(docs)
 			for doc in docs:
 				try:
 					result = mycol.insert_one(doc)
@@ -163,13 +165,19 @@ class Webscrapper:
 		os.system('ls {}}/tmp/bse'.format(constant.BASEDIR))
 		self.mongoimportjson(colname, filepath.replace('bson','json'))
 
-	def bulk_insert(self, data):
-		#..
-		#..
-		pass
+	def bulk_insert(self, data, indexname, doctype):
+		from elasticsearch import helpers, Elasticsearch
+		es = Elasticsearch()
+		temp = {'_index': indexname,'_type': doctype}
+		trending_bulk = list()
+		for doc in data:
+			del doc['_id']
+			doc.update(temp)
+			trending_bulk.append(doc)	
+		helpers.bulk(es, trending_bulk, chunk_size=1000, request_timeout=200)
 
 def main():
-	ws = Webscrapper()	
+	ws = SpyderBot()	
 	ws.crawl()
 	ws.parse()
 
