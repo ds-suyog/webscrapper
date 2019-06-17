@@ -19,13 +19,13 @@ Response:  app processes database collection's keys statistics, emails back tabu
 1. App's worker detects email from authorized clients. It interprets request 'type' from email subject and body.
 2. app creates and auto-syncs jobs  (implemented both handmade job-queue and redis job-queue) 
 3. app processes jobs in background with workers through multithreading or multiprocessing (choice provided)
-3. app's job-queue dashboard: rq-dashboard 
+3. app's job-queue dashboard: rq-dashboard
 4. app stores respective logs for information and debugging purposes
 5. app inserts data in mongodb respective collections. I wrote modules to automatically generate and receive data-dumps in both .json and .bson format.
-6. app inserts data in elasticsearch too for analytic purposes.      
-7. app sends report through email to respective registered clients      
-8. app will include django framework for dashboarding and analytic purposes.    
-9. maybe I will scrap more data, and throw NLP modules in there too. BSE has nice data for some cool data visualization, maybe I will add that.  
+6. app also has functionality to store data in Elasticsearch indexes.
+7. app sends report through email to respective registered clients.        
+8. app will include django framework for dashboarding and ORM functionality, once I decide to scale app.                
+9. After scaling I might integrate NLP functionality too.        
 
 ## To run  ##
 setup virtual environment,
