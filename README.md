@@ -1,12 +1,12 @@
-# Smart Webscrapper Bots #   
+# Intelligent SpyderBots #   
 
-#### Author: Suyog K Sethia ####
+#### Author: Suyog K Sethia ####     
 
-## I wrote two smart Webscrapper Bots ##    
+## I wrote two Intelligent Spyder Bots ##        
 1. By using requests + beautiful soup            
 2. By using Scrapy framework                  
 
-## What webscrapper does? ##
+## What spyder-bot does? ##
 app detects email from authorized clients, interprets request-type from email subject and body, processess the required request, and sends 'tabular' report through email back to respsective clients.    
 
 #### Sample request 1: bse report ####   
