@@ -17,6 +17,11 @@ class SpyderBot:
 		pass				
 
 	def crawl(self):
+    """Launch crawl process
+    The instance method performs data acquisition.
+    :param None
+    :return None.
+    """
 		logger = self.getlogger('crawl')			
 		logger.debug("\n\n================================= crawling started")	
 		logger.info("selemium emulating firefox browser")

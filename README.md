@@ -35,7 +35,7 @@ $source venv/bin/activate
 
 install dependencies,
 ```
-$pip install requirements.txt
+$pip install -r requirements.txt
 ```
 
 Feed required emails in constant.py. Then simply execute one of the three scripts named mail_trigger... . If email from client is present in worker's email box, then resultant report will be emailed back. 
